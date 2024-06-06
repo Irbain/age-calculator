@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import Poppins from "next/font/local";
 import React, { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 const poppinsBold = Poppins({
   src: "../public/fonts/Poppins-ExtraBold.ttf",
@@ -33,7 +34,24 @@ const Page = () => {
             "cursor-default text-primary text-7xl tracking-[.2em] "
           }
         >
-          AGE <div className="text-white">CALCULATOR</div>TOOL
+          <motion.div animate={{ x: [0, 100, 0] }} className="text-primary">
+            AGE{" "}
+          </motion.div>
+          <motion.div
+            animate={{ x: -5 }}
+            transition={{ ease: "easeOut", duration: 2 }}
+            className="text-white"
+          >
+            CALCULATOR
+          </motion.div>
+          <motion.div
+            animate={{ x: 100 }}
+            transition={{ ease: "easeOut", duration: 2 }}
+            className="text-primary"
+          >
+            {" "}
+            TOOL{" "}
+          </motion.div>
         </h1>
         <div className="flex w-3/4 justify-around text-2xl cursor-default">
           <div className=" text-white">Acurate</div>
