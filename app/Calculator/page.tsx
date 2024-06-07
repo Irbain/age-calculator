@@ -6,6 +6,7 @@ import arrow from "../../public/icon-arrow.svg";
 import { useMotionValue, useSpring, useInView, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
+// FONTS
 const poppinsBold = Poppins({
   src: "../../public/fonts/Poppins-ExtraBoldItalic.ttf",
   display: "swap",
@@ -26,10 +27,13 @@ interface props {
   value: number | null;
 }
 
+// THE MAIN APPLICATION
 export default function Home() {
   const currentDay = new Date().getDate();
   const currentMonth = new Date().getMonth() + 1;
   const currentYear = new Date().getFullYear();
+
+  //    STATES HOOKS
   const [valid, setValid] = React.useState<boolean>(false);
   const [isSubmit, setSubmit] = React.useState<boolean>(false);
   const [total, setTotal] = useState<{

@@ -5,6 +5,7 @@ import Poppins from "next/font/local";
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
+//  FONTS
 const poppinsBold = Poppins({
   src: "../public/fonts/Poppins-ExtraBold.ttf",
   display: "swap",
@@ -22,10 +23,11 @@ const poppinsLight = Poppins({
   display: "swap",
 });
 
+//  THE LANDING PAGE COMPONENT
 const Page = () => {
   const router = useRouter();
   return (
-    <div className="absolute bg-white h-[80vh] w-full mt-0 pt-0 top-0 overflow-hidden">
+    <div className="absolute bg-white h-[100vh] w-full mt-0 pt-0 top-0 overflow-hidden">
       <div className="bg-black h-full w-full flex flex-col items-center justify-center gap-8 ">
         <h1
           className={
@@ -71,6 +73,9 @@ const Page = () => {
           </button>
         </div>
 
+        {/* 
+    TEXT BEHIND THE LANDING PAGE HEADER
+*/}
         <div
           className={
             poppinsBold.className +
